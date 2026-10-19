@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR" data-mode="cinema" data-act="hero" data-view="landscape" data-motion="normal" class="is-loading">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Frank Henrique — frankdev.tech</title>
+  <meta name="description" content="Portfólio do Frank Henrique: código, 3D e vídeo." />
+  <meta name="theme-color" content="#08060B" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <noscript>
+    <style>html{overflow:auto}#stage,#track,#cursor,#cover{display:none!important}#ui{position:static!important}.noscript{z-index:6;color:#0e0d12;background:#f3f1ec;margin:0;padding:8px 14px;font:500 13px/18px system-ui,sans-serif;position:fixed;bottom:24px;left:50%;transform:translate(-50%)}</style>
+  </noscript>
+  <script type="module" crossorigin src="/assets/index-DLtAZXj6.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index--puDnR5G.css">
+  <meta name="robots" content="noindex, nofollow">
+  </head>
+<body>
+  <a class="skip" href="#projetos" data-goto="projetos" data-ui>Pular para os projetos</a>
+  <canvas id="stage" aria-hidden="true"></canvas>
+  <div id="frame" aria-hidden="true"><div class="moldura"></div></div>
+
+  <header id="nav" data-ui>
+    <nav aria-label="Principal">
+      <a href="#inicio" data-goto="hero">Início</a>
+      <a href="#projetos" data-goto="projetos">Projetos</a>
+      <a href="#trajetoria" data-goto="escada">Trajetória</a>
+      <a href="#contato" data-goto="contato">Contato</a>
+    </nav>
+    <a class="notch" href="#inicio" data-goto="hero" aria-label="frankdev, voltar ao início" data-dica="Voltar ao início"><span class="volta" aria-hidden="true"><svg class="ico ico--cima" aria-hidden="true" focusable="false"><use href="#i-cima"></use></svg></span>frankdev<span class="caret" aria-hidden="true">▌</span><span class="progress" aria-hidden="true"></span></a>
+    <button type="button" data-action="calmo" aria-pressed="false">Modo calmo<span class="switch" aria-hidden="true"></span></button>
+    <button type="button" class="menu" data-action="menu" aria-expanded="false" aria-controls="nav"><span class="menu-txt">Menu</span><span class="menu-ico" aria-hidden="true"></span></button>
+  </header>
+
+  <main id="ui">
+    <section id="inicio" data-act="hero" aria-labelledby="hero-titulo">
+      <div class="panel is-active" data-panel="hero" data-ui>
+        <p class="rotulo">FRANK HENRIQUE · CÓDIGO · 3D · VÍDEO</p>
+        <h1 id="hero-titulo">Eu crio o que acende a <em>tela</em>.</h1>
+        <a class="btn btn--fogo" href="#projetos" data-goto="projetos"><span>Ver projetos</span><svg class="ico ico--se" aria-hidden="true" focusable="false"><use href="#i-se"></use></svg></a>
+      </div>
+    </section>
+    <section id="projetos" data-act="projetos" aria-label="Projetos">
+      <article class="panel" data-panel="projeto" data-ui></article>
+      <nav class="rail" data-rail="projetos" data-ui aria-label="Lista de projetos"></nav>
+      <ol class="sr-only" data-list="projetos"></ol>
+    </section>
+    <section id="teclado" data-act="teclado" aria-hidden="true"></section>
+    <section id="trajetoria" data-act="escada" aria-label="Trajetória">
+      <article class="panel" data-panel="marco" data-ui></article>
+      <nav class="rail rail--escada" data-rail="escada" data-ui aria-label="Marcos da trajetória"></nav>
+      <ol class="sr-only" data-list="marcos"></ol>
+    </section>
+    <section id="contato" data-act="contato" aria-labelledby="contato-titulo">
+      <div class="panel panel--contato" data-panel="contato" data-ui>
+        <h2 id="contato-titulo" class="sr-only">Sua vez.</h2>
+        <form data-form="contato" novalidate></form>
+      </div>
+    </section>
+    <p class="hint" data-hint data-ui hidden></p>
+    <div class="toast" data-toast role="status" aria-live="polite"></div>
+  </main>
+
+  <!-- fora do #ui de propósito: o #ui é fixed (contexto de empilhamento z 3) e o case precisa ficar acima da nav (z 5) -->
+  <div class="case" data-case role="dialog" aria-modal="true" aria-labelledby="case-titulo" hidden data-ui data-lenis-prevent></div>
+  <div id="cover" aria-hidden="true"></div>
+  <div id="cursor" aria-hidden="true"></div>
+  <div id="track" aria-hidden="true"></div>
+  <div id="debug" hidden></div>
+  <noscript><p class="noscript">Este site precisa de JavaScript para o quarto 3D. O conteúdo está nas seções abaixo.</p></noscript>
+
+  <!-- ícones (traço 1,5 px, pontas retas): usados com <use href="#i-…"> -->
+  <svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+    <symbol id="i-se" viewBox="0 0 16 16"><path d="M3.5 3.5 12 12M12 5.5V12H5.5"/></symbol>
+    <symbol id="i-ne" viewBox="0 0 16 16"><path d="M3.5 12.5 12 4M5.5 4H12v6.5"/></symbol>
+    <symbol id="i-dir" viewBox="0 0 16 16"><path d="M2 8h11.5M9 3.5 13.5 8 9 12.5"/></symbol>
+    <symbol id="i-cima" viewBox="0 0 16 16"><path d="M8 14V2.5M3.5 7 8 2.5 12.5 7"/></symbol>
+    <symbol id="i-baixo" viewBox="0 0 16 16"><path d="M8 2v11.5M3.5 9 8 13.5 12.5 9"/></symbol>
+    <symbol id="i-lr" viewBox="0 0 16 16"><path d="M1.5 8h13M5 4.5 1.5 8 5 11.5M11 4.5 14.5 8 11 11.5"/></symbol>
+    <symbol id="i-voltar" viewBox="0 0 16 16"><path d="M13.5 12.5V9a3.5 3.5 0 0 0-3.5-3.5H2.5M6 2 2.5 5.5 6 9"/></symbol>
+    <symbol id="i-enter" viewBox="0 0 16 16"><path d="M13.5 2.5V9.5H3M6.5 6 3 9.5 6.5 13"/></symbol>
+    <symbol id="i-espaco" viewBox="0 0 16 16"><path d="M2.5 8.5v4h11v-4"/></symbol>
+    <symbol id="i-copiar" viewBox="0 0 16 16"><path d="M5.5 5.5h8v8h-8zM10.5 2.5h-8v8"/></symbol>
+    <symbol id="i-mais" viewBox="0 0 16 16"><path d="M8 2.5v11M2.5 8h11"/></symbol>
+    <symbol id="i-fechar" viewBox="0 0 16 16"><path d="m3.5 3.5 9 9M12.5 3.5l-9 9"/></symbol>
+  </svg>
+</body>
+</html>
